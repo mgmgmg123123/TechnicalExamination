@@ -1,0 +1,88 @@
+@use "./_varibal" as v;
+.header {
+  background-color: v.$color-white;
+  transition: transform 0.5s;
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &__inner {
+    width: 100%;
+    display: flex;
+    padding: 18px 23px 10px 30px;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+  }
+  &__logo-img {
+    fill: v.$color-primary;
+    margin-top: 5px;
+  }
+  &__company {
+    margin-left: 20px;
+  }
+  &__company h1 {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-top: 5px;
+  }
+  &__hamburger-menu {
+    padding-top: 10px;
+  }
+  &.navigation_expanded {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+  }
+}
+.hamburger-menu {
+  &__top,
+  &__middle,
+  &__bottom {
+    width: 20px;
+    height: 2px;
+    background-color: v.$color-primary;
+    transition: transform 0.5s;
+    display: block;
+    margin-bottom: 4px;
+    margin-left: 4px;
+  }
+  &__bottom {
+    margin-bottom: 0px;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2;
+    padding-right: 2px;
+  }
+}
+.navigation_expanded {
+  .hamburger-menu {
+    &__top,
+    &__middle,
+    &__bottom {
+      background-color: v.$color-white;
+    }
+    &__top {
+      transform: rotate(45deg) translateX(5px) translateY(6px);
+    }
+    &__middle {
+      height: 0px;
+    }
+    &__bottom {
+      transform: rotate(-45deg) translateX(-2px) translateY(2px);
+      margin-bottom: 10px;
+    }
+    &__text {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2;
+      padding-right: 2px;
+    }
+  }
+  .header__logo-img {
+    fill: v.$color-white;
+  }
+}

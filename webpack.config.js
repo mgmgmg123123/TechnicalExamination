@@ -1,9 +1,9 @@
-const path = require('path')
+const path = require('path');
 const MiniCssExtractPlugin = new require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = new require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = new require('html-webpack-plugin')
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -77,9 +77,14 @@ module.exports = {
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
+        new ESLintPlugin({
+            extensions: ['.ts', '.js'],
+            exclude: 'node_modules'
+        }),
     ], devServer: {
         static: {
             directory: path.join(__dirname, 'dist')
         }
-    }
+    },
+
 }
