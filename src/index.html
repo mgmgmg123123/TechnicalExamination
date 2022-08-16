@@ -72,10 +72,18 @@
               <li class="navigation-pc-list__item"><a href="">制作実績</a></li>
               <li class="navigation-pc-list__item"><a href="">採用情報</a></li>
             </ul>
-            <button class="navigation-pc__contact-button">お問い合わせ</button>
+            <button type="button" class="navigation-pc__contact-button">
+              お問い合わせ
+            </button>
           </nav>
           <!-- PC用ナビゲーション end -->
-          <button class="header__hamburger-menu sp-visible">
+          <button
+            type="button"
+            class="header__hamburger-menu sp-visible"
+            aria-controls="navigation-menu"
+            aria-expanded="false"
+            aria-label="メニューを開閉する"
+          >
             <span class="hamburger-menu__top"></span>
             <span class="hamburger-menu__middle"></span>
             <span class="hamburger-menu__bottom"></span>
@@ -84,7 +92,7 @@
         </div>
       </div>
       <!-- 展開時表示用メニュー -->
-      <nav class="navigation">
+      <nav class="navigation" aria-hidden="true" id="navigation-menu">
         <ul class="navigation__list">
           <li class="navigation-list__item"><a href="/">会社紹介</a></li>
           <li class="navigation-list__item"><a href="/">お知らせ</a></li>
@@ -92,7 +100,9 @@
           <li class="navigation-list__item"><a href="/">制作実績</a></li>
           <li class="navigation-list__item"><a href="/">採用情報</a></li>
         </ul>
-        <button class="navigation__contact-button">お問い合わせ</button>
+        <button type="button" class="navigation__contact-button">
+          お問い合わせ
+        </button>
       </nav>
       <!-- 展開時表示用メニュー end -->
     </header>

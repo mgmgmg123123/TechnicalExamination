@@ -12,11 +12,15 @@ const htmlElement = document.querySelector<HTMLElement>("html")!;
 hamburgerButton.addEventListener(eventType, () => {
     if (header.classList.contains("navigation_expanded")) {
         hamburgerMenuText.innerHTML = "menu"
+        hamburgerButton.setAttribute('aria-expanded', 'false');
+        navigation.setAttribute('aria-hidden', 'true');
         bodyElement.classList.remove("prohibit-scrolling");
         htmlElement.classList.remove("prohibit-scrolling");
 
     } else {
         hamburgerMenuText.innerHTML = "close"
+        hamburgerButton.setAttribute('aria-expanded', 'true');
+        navigation.setAttribute('aria-hidden', 'false');
         bodyElement.classList.add("prohibit-scrolling");
         htmlElement.classList.add("prohibit-scrolling");
 
