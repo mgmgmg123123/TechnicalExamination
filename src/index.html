@@ -41,7 +41,7 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <div class="header__logo">
+        <a class="header__logo" href="/">
           <svg
             class="header__logo-img"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,23 +57,25 @@
           </svg>
           <div class="header__company">
             <h1>株式会社FLAT</h1>
-            <p style="display: none">渋谷のコーディング専門プロダクション</p>
+            <p class="pc-visible header__company-description">
+              渋谷のコーディング専門プロダクション
+            </p>
           </div>
-        </div>
+        </a>
         <div>
           <!-- PC用ナビゲーション -->
-          <nav style="display: none">
-            <ul>
-              <li><a href="">会社紹介</a></li>
-              <li><a href="">お知らせ</a></li>
-              <li><a href="">サービス</a></li>
-              <li><a href="">制作実績</a></li>
-              <li><a href="">採用情報</a></li>
+          <nav class="pc-visible navigation-pc">
+            <ul class="navigation-pc__list">
+              <li class="navigation-pc-list__item"><a href="">会社紹介</a></li>
+              <li class="navigation-pc-list__item"><a href="">お知らせ</a></li>
+              <li class="navigation-pc-list__item"><a href="">サービス</a></li>
+              <li class="navigation-pc-list__item"><a href="">制作実績</a></li>
+              <li class="navigation-pc-list__item"><a href="">採用情報</a></li>
             </ul>
-            <button>お問い合わせ</button>
+            <button class="navigation-pc__contact-button">お問い合わせ</button>
           </nav>
           <!-- PC用ナビゲーション end -->
-          <button class="header__hamburger-menu">
+          <button class="header__hamburger-menu sp-visible">
             <span class="hamburger-menu__top"></span>
             <span class="hamburger-menu__middle"></span>
             <span class="hamburger-menu__bottom"></span>
@@ -97,5 +99,6 @@
     <section class="section">
       <div class="section__inner"></div>
     </section>
+    <footer class="footer pc-visible"></footer>
   </body>
 </html>

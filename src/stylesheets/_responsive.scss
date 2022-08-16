@@ -1,0 +1,128 @@
+@use "./_varibal" as v;
+
+@media screen and (min-width: 992px) {
+  // common
+  .sp-visible {
+    display: none;
+  }
+  .pc-visible {
+    display: block;
+  }
+
+  //   header
+  .header {
+    height: 100px;
+    &__inner {
+      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      display: flex;
+      padding: 26px 25px 26px 30px;
+      justify-content: space-between;
+    }
+    &__logo-img {
+      width: 63px;
+      height: 35px;
+      display: block;
+    }
+    &__company {
+      margin-left: 18px;
+    }
+  }
+  .navigation_scrolled {
+    .header__inner {
+      padding-right: 20px;
+    }
+    .header__hamburger-menu {
+      display: block;
+      background-color: v.$color-primary;
+      padding: 24px 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      color: v.$color-white;
+      transform: translateY(-15px);
+    }
+    .hamburger-menu {
+      &__top,
+      &__middle,
+      &__bottom {
+        background-color: v.$color-white;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 6px;
+      }
+      &__bottom {
+        margin-bottom: 0px;
+      }
+      &__text {
+        padding-left: 5px;
+      }
+    }
+    &.navigation_expanded {
+      .hamburger-menu {
+        &__top {
+          transform: rotate(45deg) translateX(8px) translateY(10px);
+        }
+        &__middle {
+          height: 0px;
+        }
+        &__bottom {
+          transform: rotate(-45deg) translateX(-3px) translateY(2px);
+          margin-bottom: 15px;
+        }
+        &__text {
+          text-transform: uppercase;
+          font-size: 10px;
+          letter-spacing: 1.5px;
+          padding-right: 15px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  //   navigation
+  .navigation-pc {
+    display: flex;
+    &__list {
+      padding-top: 16px;
+      margin-right: 45px;
+      display: flex;
+    }
+    &-list__item {
+      margin-right: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      transition-duration: 0.3s;
+    }
+    &-list__item:hover,
+    &__contact-button:hover {
+      opacity: 0.7;
+    }
+    &-list__item:last-child {
+      margin-right: 0px;
+    }
+    &__contact-button {
+      text-align: center;
+      width: 150px;
+      height: 48px;
+      border-radius: 24px;
+      background-color: v.$color-primary;
+      color: v.$color-white;
+      padding: 12px 26px 12px 26px;
+    }
+  }
+
+  //   top
+  .section {
+    background-color: v.$color-white;
+    &__inner {
+      background-color: v.$color-light-gray;
+      width: calc(100% - 40px);
+      max-width: 1240px;
+      margin: auto;
+      padding-top: 100px;
+    }
+  }
+}

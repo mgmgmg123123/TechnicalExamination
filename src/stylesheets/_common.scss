@@ -1,3 +1,12 @@
 body {
   font-family: source-han-sans-japanese, sans-serif;
 }
+.sp-visible {
+  display: block;
+}
+.pc-visible {
+  display: none;
+}
+.prohibit-scrolling {
+  overflow: hidden;
+}

@@ -1,9 +1,12 @@
+@use "./_varibal" as v;
+
 body {
 }
 .section {
   &__inner {
-    background-color: #f0f3f5;
+    background-color: v.$color-light-gray;
     width: 100%;
-    height: 1200px;
+    height: 12000px;
+    padding-top: 70px;
   }
 }
