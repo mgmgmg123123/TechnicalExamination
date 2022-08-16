@@ -22,9 +22,11 @@
     margin-bottom: 26px;
     font-size: 18px;
     font-weight: bold;
+    transition-duration: 0.3s;
   }
-  &-list__item:hover {
-    opacity: 0.8;
+  &-list__item:hover,
+  &__contact-button:hover {
+    opacity: 0.7;
   }
   &__contact-button {
     font-size: 16px;
@@ -32,15 +34,7 @@
     border: 2px solid v.$color-white;
     border-radius: 24px;
     padding: 12px 80px;
-  }
-}
-.navigation_scrolled {
-  .navigation {
-    top: 100px;
-    &__list {
-      margin-top: 90px;
-      margin-bottom: 30px;
-    }
+    transition-duration: 0.3s;
   }
 }
 .navigation-pc.navigation_scrolled {
